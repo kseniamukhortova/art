@@ -114,17 +114,17 @@ public class ARTSurfaceViewShadowNode extends LayoutShadowNode
   @Override
   public void setThemedContext(ThemedReactContext themedContext) {
     super.setThemedContext(themedContext);
-    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+    // if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
       themedContext.addLifecycleEventListener(this);
-    }
+    // }
   }
 
   @Override
   public void dispose() {
     super.dispose();
-    if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
+    // if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
       getThemedContext().removeLifecycleEventListener(this);
-    }
+    // }
   }
 
   @Override
